@@ -1,9 +1,17 @@
+  
+  <?php
+    $output ='';
+  ?>
+  
   <!-- Область основного контента -->
   <div id="content">
     <!-- Заголовок -->
     <h1>Таблица умножения</h1>
     <!-- Заголовок -->
-    <form action=''>
+
+    if($output) 
+      echo "<h3>Result is: $output .</h3>";
+    <form action='' method='post'>
       <label>Количество колонок: </label>
       <br />
       <input name='cols' type='text' value="" />
