@@ -1,0 +1,40 @@
+body {
+    /* background-color: rgba(0, 0, 0, 0.486); */
+    /* color: rgba(177, 175, 174, 0.774); */
+}
+
+h1 {
+    padding-left: 33px;
+}
+
+
+li {
+    display: inline;
+    font-family: 'Nova Mono', monospace;
+	font-size: 2.25rem;
+	text-transform: uppercase;
+	width: 4096px;
+	height: 365px;
+	/* color: goldenrod; */
+	perspective: 900px;
+    /* text-decoration: wavy; */
+    /* decoration: none; */
+}
+
+#mainPage {
+    width: 90%;
+    /* height: 100%; */
+    border: black solid 1px;
+    align-self: center;
+    align-content: center;
+}
+
+a:-webkit-any-link {
+    /* color: goldenrod; */
+    cursor: pointer;
+    /* text-decoration: none; */
+}
+
+a li:hower {
+    /* color: greenyellow; */
+}
