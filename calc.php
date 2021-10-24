@@ -1,4 +1,14 @@
 <?php
+
+  function clearStr($data) {
+    return trim(strip_tags($data));
+  }
+
+  function clearInt($data) {
+    // return abs($data);
+    return $data;
+  }
+
   $output = "";
   if($_SERVER["REQUEST_METHOD"]=="POST") {
     $num1 = (int)$_POST["num1"];
@@ -6,26 +16,23 @@
     $opr = $_POST["operator"];
     $output = "$num1 $opr $num2 = ";
 
-  switch($opr){
-    case "+": $res = $num1 + $num2; 
-    echo "<h3>Result: " . $output . $res ."</h3>"; break;
-    case "-": $res = $num1 - $num2; 
-    echo "<h3>Result: " . $output . $res ."</h3>"; break;
-    case "*": $res = $num1 * $num2; 
-    echo "<h3>Result: " . $output . $res ."</h3>"; break;
-    case "/": 
-      if($num2 == 0)
-        $output = "You can NOT divide by 0";
-      else 
-        $res = $num1 / $num2; 
-    default: $output = "Unknown operator";
-  }
-
-
+    switch($opr){
+      case "+": $res = $num1 + $num2; 
+      echo "<h3>Result: " . $output . $res ."</h3>"; break;
+      case "-": $res = $num1 - $num2; 
+      echo "<h3>Result: " . $output . $res ."</h3>"; break;
+      case "*": $res = $num1 * $num2; 
+      echo "<h3>Result: " . $output . $res ."</h3>"; break;
+      case "/": 
+        if($num2 == 0)
+          $output = "You can NOT divide by 0";
+        else 
+          $res = $num1 / $num2; 
+      default: $output = "Unknown operator";
+    }
   }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,10 +43,7 @@
   <link rel="stylesheet" href="mystyle.css">
 </head>
   <body>
-
     <h1>Calculator</h1>
-
-
     <!-- Область основного контента -->
     <form action='' method='post'>
           <label>Число 1:</label>
@@ -56,15 +60,8 @@
           <br />
           <br />
           <input type='submit' value='Считать'>
-
-
         </form>
-
-
-    
         <!-- Область основного контента -->    
-
-
   </body>
 </html>
 
