@@ -7,11 +7,20 @@
     $output = "$num1 $opr $num2 = ";
 
   switch($opr){
-    case "+": $res = $num1 + $num2; break;
-    case "-": $res = $num1 - $num2; break;
+    case "+": $res = $num1 + $num2; 
+    echo "<h3>Result: " . $output . $res ."</h3>"; break;
+    case "-": $res = $num1 - $num2; 
+    echo "<h3>Result: " . $output . $res ."</h3>"; break;
+    case "*": $res = $num1 * $num2; 
+    echo "<h3>Result: " . $output . $res ."</h3>"; break;
+    case "/": 
+      if($num2 == 0)
+        $output = "You can NOT divide by 0";
+      else 
+        $res = $num1 / $num2; 
+    default: $output = "Unknown operator";
   }
 
-  echo "<h3>Result: " . $res . "</h3>";
 
   }
 
